@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "30047953206",
+    "firebase_url": "https://diplomadatabase-b1df6-default-rtdb.firebaseio.com",
+    "project_id": "diplomadatabase-b1df6",
+    "storage_bucket": "diplomadatabase-b1df6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30047953206:android:38ce79aafd21d737e4d397",
+        "android_client_info": {
+          "package_name": "com.example.diploma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30047953206-ejpq409530vhbkbrhart5iveq7fnfr42.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.diploma",
+            "certificate_hash": "5250fc5baa07b570b991e7dbc82f646e0dc26195"
+          }
+        },
+        {
+          "client_id": "30047953206-u9rt7ihesr96an1tdik2paafod2evd26.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNuyjJKb43oxYdQrqBu8FJROqCC9424GQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30047953206-u9rt7ihesr96an1tdik2paafod2evd26.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30047953206:android:c7466029a41a82a0e4d397",
+        "android_client_info": {
+          "package_name": "com.example.schoolsmart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30047953206-u9rt7ihesr96an1tdik2paafod2evd26.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNuyjJKb43oxYdQrqBu8FJROqCC9424GQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30047953206-u9rt7ihesr96an1tdik2paafod2evd26.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
