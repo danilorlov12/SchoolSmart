@@ -1,3 +1,59 @@
 <resources>
-    <string name="app_name">SchoolSmart</string>
+    <string name="app_name">Школа №8</string>
+    <string name="email">Електронна пошта</string>
+    <string name="password">Пароль</string>
+    <string name="log_in">Авторизація</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="come_in">Увійти</string>
+    <string name="come_in_google">Войти через Google</string>
+    <string name="application_image">Application Image</string>
+    <string name="chapters">Розділи</string>
+    <string name="vocabulary">Словник</string>
+    <string name="questions">Питання</string>
+    <string name="identity">Профіль</string>
+    <string name="teachers">Вчителі</string>
+    <string name="school_members">Учні</string>
+    <string name="subjects">Предмети</string>
+
+    <string name="count_vocab">Кількість слів: %1$d</string>
+    <string name="count_question">Кількість питань: %1$d</string>
+    <string name="count_value">Кількість балів: %1$s</string>
+    <string name="count_school_member">Кількість учнів: %1$d</string>
+    <string name="count_test_result">Результат тесту: %1$s / %2$s</string>
+    <string name="subject_name_and_school_class">%1$s, %2$d клас</string>
+    <string name="name_school_class">%1$s клас</string>
+    <string name="number_title">%1$s: %2$s</string>
+    <string name="count_question_test">%1$d / %2$d</string>
+    <string name="test_result_view">Результат тесту: %1$s</string>
+
+    <string name="answerA">Відповдь А</string>
+    <string name="answerB">Відповдь Б</string>
+    <string name="answerC">Відповдь В</string>
+    <string name="answerD">Відповдь Г</string>
+    <string name="correctAnswer">Вірна відповідь</string>
+    <string name="variants">Варіанти відповідей</string>
+    <string name="count_value_simple">Кількість балів</string>
+    <string name="done">Вийти</string>
+
+    <string name="surname">Прізвище</string>
+    <string name="name">Ім\'я</string>
+    <string name="patronymic">По батькові</string>
+    <string name="school_class">Класи</string>
+    <string name="list_school_member">Список учнів</string>
+    <string name="number">Номер</string>
+    <string name="title">Заголовок</string>
+    <string name="info">Інформація</string>
+    <string name="add">Додати</string>
+    <string name="test_result">Перегляд результатів тесту</string>
+
+    <string name="input_name_school_class">Введіть назву класу</string>
+    <string name="input_name">Введіть назву</string>
+
+    <string name="select_school_class">Оберіть клас</string>
+    <string name="select_teacher">Оберіть вчителя</string>
+
+    <string name="email_example">example@email.com</string>
+    <string name="password_example">**************</string>
+    <string name="name_example">Малиновский А.В.</string>
+    <string name="school_class_example">11-А Клас</string>
 </resources>
