@@ -1,16 +1,38 @@
 package com.example.schoolsmart.presentation.director.subject
 
-import android.os.Bundle
-import android.view.View
-import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.schoolsmart.base.BaseFragment
+import com.example.schoolsmart.base.ClickListener
 import com.example.schoolsmart.databinding.FragmentListBinding
+import com.example.schoolsmart.domain.entities.Subject
+import com.example.schoolsmart.presentation.director.subject.adapter.SubjectAdapter
 
 class SubjectsFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::inflate) {
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    private val viewModel: SubjectsViewModel by lazy {
+        ViewModelProvider(this)[SubjectsViewModel::class.java]
+    }
 
-        Toast.makeText(requireContext(), "Subjects", Toast.LENGTH_SHORT).show()
+    private lateinit var _adapter: SubjectAdapter
+
+    override fun initBinding(): Unit = with(binding) {
+        _adapter = SubjectAdapter(object : ClickListener<Subject> {
+            override fun click(model: Subject) {
+                TODO("Not yet implemented")
+            }
+        })
+        recyclerView.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = _adapter
+        }
+    }
+
+    override fun initViewModel() = with(viewModel) {
+        loadSubjects()
+
+        subjects.observe(viewLifecycleOwner) {
+            _adapter.submitList(it)
+        }
     }
 }

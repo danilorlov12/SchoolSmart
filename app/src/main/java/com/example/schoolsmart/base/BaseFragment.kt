@@ -19,6 +19,15 @@ abstract class BaseFragment<B: ViewBinding>(
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initBinding()
+        initViewModel()
+    }
+
+    protected abstract fun initBinding()
+    protected abstract fun initViewModel()
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

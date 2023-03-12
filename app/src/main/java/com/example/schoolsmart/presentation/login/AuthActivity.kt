@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.schoolsmart.base.BaseActivity
 import com.example.schoolsmart.databinding.AuthActivityBinding
-import com.example.schoolsmart.domain.entities.User
+import com.example.schoolsmart.domain.entities.UserType
 import com.example.schoolsmart.presentation.director.DirectorActivity
 
 class AuthActivity : BaseActivity<AuthActivityBinding>(AuthActivityBinding::inflate) {
@@ -18,24 +18,22 @@ class AuthActivity : BaseActivity<AuthActivityBinding>(AuthActivityBinding::infl
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         viewModel.loggedUser.observe(this) { user ->
             Toast.makeText(this, "$user", Toast.LENGTH_SHORT).show()
             when (user) {
-                User.DIRECTOR -> {
+                UserType.DIRECTOR -> {
                     val intent = Intent(this, DirectorActivity::class.java)
                     startActivity(intent)
                 }
-                User.TEACHER -> {
+                UserType.TEACHER -> {
 
                 }
-                User.SCHOOL_MEMBER -> {
+                UserType.SCHOOL_MEMBER -> {
 
                 }
                 else -> return@observe
             }
         }
-
         binding.etUsername.setText("danil.orlov.3022013@gmail.com")
         binding.etPassword.setText("zooming4421")
 
