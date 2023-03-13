@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/navigationTeachers"
-        android:name="com.example.schoolsmart.presentation.director.teacher.TeachersFragment" />
+        android:name="com.example.schoolsmart.presentation.director.teacher_list.TeachersFragment" />
 
     <fragment
         android:id="@+id/navigationSchoolClasses"

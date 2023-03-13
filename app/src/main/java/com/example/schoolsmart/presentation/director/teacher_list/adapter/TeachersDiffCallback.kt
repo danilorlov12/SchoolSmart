@@ -1,4 +1,4 @@
-package com.example.schoolsmart.presentation.director.teacher.adapter
+package com.example.schoolsmart.presentation.director.teacher_list.adapter
 
 import androidx.recyclerview.widget.DiffUtil
 import com.example.schoolsmart.domain.entities.Teacher

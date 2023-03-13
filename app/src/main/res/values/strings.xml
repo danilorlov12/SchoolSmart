@@ -56,4 +56,6 @@
     <string name="password_example">**************</string>
     <string name="name_example">Малиновский А.В.</string>
     <string name="school_class_example">11-А Клас</string>
+
+    <string name="adding_button">Кнопка добавления</string>
 </resources>
