@@ -6,8 +6,8 @@ import com.example.schoolsmart.base.BaseFragment
 import com.example.schoolsmart.base.ClickListener
 import com.example.schoolsmart.databinding.FragmentListBinding
 import com.example.schoolsmart.domain.entities.Teacher
-import com.example.schoolsmart.presentation.director.user_edit.UserEditDialog
 import com.example.schoolsmart.presentation.director.teacher_list.adapter.TeachersAdapter
+import com.example.schoolsmart.presentation.director.user_edit.UserEditDialog
 
 class TeachersFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::inflate) {
 

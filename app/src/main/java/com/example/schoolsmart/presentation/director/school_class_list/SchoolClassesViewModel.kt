@@ -1,4 +1,4 @@
-package com.example.schoolsmart.presentation.director.school_class
+package com.example.schoolsmart.presentation.director.school_class_list
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

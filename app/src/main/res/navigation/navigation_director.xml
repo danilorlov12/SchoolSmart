@@ -10,10 +10,21 @@
 
     <fragment
         android:id="@+id/navigationSchoolClasses"
-        android:name="com.example.schoolsmart.presentation.director.school_class.SchoolClassesFragment" />
+        android:name="com.example.schoolsmart.presentation.director.school_class_list.SchoolClassesFragment">
+        <action
+            android:id="@+id/toSchoolClassFragment"
+            app:destination="@id/schoolClassesFragment">
+            <argument
+                android:name="id"
+                app:argType="string" />
+        </action>
+    </fragment>
 
     <fragment
         android:id="@+id/navigationSubjects"
         android:name="com.example.schoolsmart.presentation.director.subject.SubjectsFragment" />
 
+    <fragment
+        android:id="@+id/schoolClassesFragment"
+        android:name="com.example.schoolsmart.presentation.director.school_member_list.SchoolMemberListFragment" />
 </navigation>

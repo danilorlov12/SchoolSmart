@@ -1,4 +1,4 @@
-package com.example.schoolsmart.presentation.director.school_class
+package com.example.schoolsmart.presentation.director.school_class_list
 
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -6,7 +6,7 @@ import com.example.schoolsmart.base.BaseFragment
 import com.example.schoolsmart.base.ClickListener
 import com.example.schoolsmart.databinding.FragmentListBinding
 import com.example.schoolsmart.domain.entities.SchoolClass
-import com.example.schoolsmart.presentation.director.school_class.adapter.SchoolClassesAdapter
+import com.example.schoolsmart.presentation.director.school_class_list.adapter.SchoolClassesAdapter
 
 class SchoolClassesFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::inflate) {
 
@@ -19,7 +19,8 @@ class SchoolClassesFragment : BaseFragment<FragmentListBinding>(FragmentListBind
     override fun initBinding(): Unit = with(binding) {
         _adapter = SchoolClassesAdapter(object : ClickListener<SchoolClass> {
             override fun click(model: SchoolClass) {
-                TODO("Not yet implemented")
+                val action = SchoolClassesFragmentDirections.toSchoolClassFragment(model.id)
+                nav.navigate(action)
             }
         })
         recyclerView.apply {

@@ -1,4 +1,4 @@
-package com.example.schoolsmart.presentation.director.school_class.adapter
+package com.example.schoolsmart.presentation.director.school_class_list.adapter
 
 import android.view.LayoutInflater
 import android.view.View

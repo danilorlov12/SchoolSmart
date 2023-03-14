@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 
 class TeachersViewModel : BaseViewModel() {
 
-    private val teachersRepository: TeacherRepository by lazy { TeacherRepositoryImpl() }
+    private val teachersRepository: TeacherRepository = TeacherRepositoryImpl()
 
     private val _teachers = MutableLiveData<List<Teacher>>()
     val teachers: LiveData<List<Teacher>> = _teachers
