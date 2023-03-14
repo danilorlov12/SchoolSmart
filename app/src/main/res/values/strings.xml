@@ -44,6 +44,7 @@
     <string name="title">Заголовок</string>
     <string name="info">Інформація</string>
     <string name="add">Додати</string>
+    <string name="save">Зберегти</string>
     <string name="test_result">Перегляд результатів тесту</string>
 
     <string name="input_name_school_class">Введіть назву класу</string>

@@ -6,7 +6,7 @@ import com.example.schoolsmart.base.BaseFragment
 import com.example.schoolsmart.base.ClickListener
 import com.example.schoolsmart.databinding.FragmentListBinding
 import com.example.schoolsmart.domain.entities.Teacher
-import com.example.schoolsmart.presentation.director.teacher_edit.TeacherEditDialog
+import com.example.schoolsmart.presentation.director.user_edit.UserEditDialog
 import com.example.schoolsmart.presentation.director.teacher_list.adapter.TeachersAdapter
 
 class TeachersFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::inflate) {
@@ -19,12 +19,12 @@ class TeachersFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::
 
     override fun initBinding(): Unit = with(binding) {
         binding.btnCreate.setOnClickListener {
-            val dialog = TeacherEditDialog()
+            val dialog = UserEditDialog("Teacher")
             dialog.show(parentFragmentManager, "")
         }
         _adapter = TeachersAdapter(object : ClickListener<Teacher> {
             override fun click(model: Teacher) {
-                val dialog = TeacherEditDialog(model)
+                val dialog = UserEditDialog("Teacher", model)
                 dialog.show(parentFragmentManager, "")
             }
         })

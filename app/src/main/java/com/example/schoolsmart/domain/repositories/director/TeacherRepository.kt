@@ -4,5 +4,4 @@ import com.example.schoolsmart.domain.entities.Teacher
 
 interface TeacherRepository {
     suspend fun loadAllTeachers(): List<Teacher>
-    suspend fun createTeacher(teacher: Teacher, password: String)
 }

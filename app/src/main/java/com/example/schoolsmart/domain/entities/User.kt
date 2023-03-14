@@ -1,9 +1,9 @@
 package com.example.schoolsmart.domain.entities
 
-data class Teacher(
-    val id: String,
+open class User(
     override val firstName: String,
     override val lastName: String,
     override val middleName: String,
     override val email: String,
-) : User(firstName, lastName, middleName, email)
+    val password: String? = null
+) : Person(firstName, lastName, middleName, email)

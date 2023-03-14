@@ -87,9 +87,12 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSave"
+        style="@style/ButtonTextStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_button_blue"
+        android:text="@string/save"
         app:layout_constraintEnd_toEndOf="@+id/tilPasswordName"
         app:layout_constraintStart_toStartOf="@+id/tilPasswordName"
         app:layout_constraintTop_toBottomOf="@+id/tilPasswordName" />
