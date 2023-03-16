@@ -1,17 +1,13 @@
 package com.example.schoolsmart.domain.repositories.director
 
-import com.example.schoolsmart.data.State
 import com.example.schoolsmart.domain.entities.Teacher
+import com.example.schoolsmart.extensions.stateFlow
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.tasks.await
 
 class TeacherRepositoryImpl : TeacherRepository {
 
-    override suspend fun loadAllTeachers() = flow<State<List<Teacher>>> {
-        emit(State.loading())
+    override suspend fun loadAllTeachers() = stateFlow {
         val teachers = arrayListOf<Teacher>()
         val firebaseDatabase = FirebaseDatabase.getInstance().reference
         firebaseDatabase.child("Users").child("Teacher").get().await().children.map { ds ->
@@ -25,6 +21,6 @@ class TeacherRepositoryImpl : TeacherRepository {
                 )
             )
         }
-        emit(State.success(teachers))
-    }.flowOn(Dispatchers.Default)
+        teachers
+    }
 }
