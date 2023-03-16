@@ -35,8 +35,6 @@ class TeachersFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::
     }
 
     override fun initViewModel() = with(viewModel) {
-        loadTeachers()
-
         teachers.observe(viewLifecycleOwner) {
             _adapter.submitList(it)
         }

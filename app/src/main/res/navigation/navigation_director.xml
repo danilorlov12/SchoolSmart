@@ -13,7 +13,9 @@
         android:name="com.example.schoolsmart.presentation.director.school_class_list.SchoolClassesFragment">
         <action
             android:id="@+id/toSchoolClassFragment"
-            app:destination="@id/schoolClassesFragment">
+            app:destination="@id/schoolClassesFragment"
+            app:restoreState="true"
+            app:popUpToSaveState="true">
             <argument
                 android:name="id"
                 app:argType="string" />

@@ -2,11 +2,13 @@ package com.example.schoolsmart.presentation.director.school_class_list
 
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.schoolsmart.R
 import com.example.schoolsmart.base.BaseFragment
 import com.example.schoolsmart.base.ClickListener
 import com.example.schoolsmart.databinding.FragmentListBinding
 import com.example.schoolsmart.domain.entities.SchoolClass
 import com.example.schoolsmart.presentation.director.school_class_list.adapter.SchoolClassesAdapter
+import com.example.schoolsmart.presentation.director.school_member_list.SchoolMemberListFragment
 
 class SchoolClassesFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::inflate) {
 
@@ -19,6 +21,9 @@ class SchoolClassesFragment : BaseFragment<FragmentListBinding>(FragmentListBind
     override fun initBinding(): Unit = with(binding) {
         _adapter = SchoolClassesAdapter(object : ClickListener<SchoolClass> {
             override fun click(model: SchoolClass) {
+//                this@SchoolClassesFragment.requireActivity().supportFragmentManager
+//                    .beginTransaction().replace(R.id.fragmentContainer, SchoolMemberListFragment(), SchoolMemberListFragment().name())
+//                    .commit()
                 val action = SchoolClassesFragmentDirections.toSchoolClassFragment(model.id)
                 nav.navigate(action)
             }
@@ -30,8 +35,6 @@ class SchoolClassesFragment : BaseFragment<FragmentListBinding>(FragmentListBind
     }
 
     override fun initViewModel() = with(viewModel) {
-        loadSchoolClasses()
-
         schoolClasses.observe(viewLifecycleOwner) {
             _adapter.submitList(it)
         }

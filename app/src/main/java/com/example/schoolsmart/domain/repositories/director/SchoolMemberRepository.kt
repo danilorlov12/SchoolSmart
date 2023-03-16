@@ -1,7 +1,9 @@
 package com.example.schoolsmart.domain.repositories.director
 
+import com.example.schoolsmart.data.State
 import com.example.schoolsmart.domain.entities.SchoolMember
+import kotlinx.coroutines.flow.Flow
 
 interface SchoolMemberRepository {
-    suspend fun loadSchoolMembers(): List<SchoolMember>
+    suspend fun loadSchoolMembers(): Flow<State<List<SchoolMember>>>
 }

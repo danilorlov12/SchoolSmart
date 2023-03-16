@@ -1,9 +1,11 @@
 package com.example.schoolsmart.presentation.director.school_member_list
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.schoolsmart.base.BaseViewModel
+import com.example.schoolsmart.data.State
 import com.example.schoolsmart.domain.entities.SchoolMember
 import com.example.schoolsmart.domain.repositories.director.SchoolMemberRepository
 import com.example.schoolsmart.domain.repositories.director.SchoolMemberRepositoryImpl
@@ -18,7 +20,14 @@ class SchoolMemberListViewModel : BaseViewModel() {
 
     fun loadSchoolMembers() {
         viewModelScope.launch {
-            _schoolMembers.value = repository.loadSchoolMembers()
+            repository.loadSchoolMembers().collect { state ->
+                when (state) {
+                    is State.Success -> {
+                        _schoolMembers.value = state.data ?: emptyList()
+                    }
+                    else -> Log.e("schoolMembers", state.toString())
+                }
+            }
         }
     }
 }

@@ -29,8 +29,6 @@ class SubjectsFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::
     }
 
     override fun initViewModel() = with(viewModel) {
-        loadSubjects()
-
         subjects.observe(viewLifecycleOwner) {
             _adapter.submitList(it)
         }
