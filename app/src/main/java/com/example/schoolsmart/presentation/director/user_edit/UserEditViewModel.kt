@@ -28,6 +28,14 @@ class UserEditViewModel : BaseViewModel() {
     private val _password: MutableLiveData<String> = MutableLiveData()
     val password: LiveData<String> = _password
 
+    fun setDataFromUser(user: User) {
+        _firstName.value = user.firstName
+        _lastName.value = user.lastName
+        _middleName.value = user.middleName
+        _email.value = user.email
+        _password.value = user.password ?: ""
+    }
+
     fun sendTeacherInfoToDatabase(userType: String) {
         viewModelScope.launch {
             val user = User(

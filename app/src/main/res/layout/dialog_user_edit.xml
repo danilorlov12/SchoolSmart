@@ -2,30 +2,40 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilFirstName"
+        style="@style/TextInputLayoutDefault"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginTop="32dp"
+        android:hint="@string/surname"
+        android:theme="@style/TextInputEditTextDefault"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etFirstName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:maxLength="35"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:singleLine="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilLastName"
+        style="@style/TextInputLayoutDefault"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/name"
+        android:theme="@style/TextInputEditTextDefault"
         app:layout_constraintEnd_toEndOf="@+id/tilFirstName"
         app:layout_constraintStart_toStartOf="@+id/tilFirstName"
         app:layout_constraintTop_toBottomOf="@+id/tilFirstName">
@@ -33,15 +43,22 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etLastName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:maxLength="35"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:singleLine="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilMiddleName"
+        style="@style/TextInputLayoutDefault"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/patronymic"
+        android:theme="@style/TextInputEditTextDefault"
         app:layout_constraintEnd_toEndOf="@+id/tilLastName"
         app:layout_constraintStart_toStartOf="@+id/tilLastName"
         app:layout_constraintTop_toBottomOf="@+id/tilLastName">
@@ -49,15 +66,22 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etMiddleName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:maxLength="35"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:singleLine="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilEmailName"
+        style="@style/TextInputLayoutDefault"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/email"
+        android:theme="@style/TextInputEditTextDefault"
         app:layout_constraintEnd_toEndOf="@+id/tilMiddleName"
         app:layout_constraintStart_toStartOf="@+id/tilMiddleName"
         app:layout_constraintTop_toBottomOf="@+id/tilMiddleName">
@@ -65,15 +89,24 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmailName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:maxLength="50"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:singleLine="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilPasswordName"
+        style="@style/TextInputLayoutDefault"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/password"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:theme="@style/TextInputEditTextDefault"
         app:layout_constraintEnd_toEndOf="@+id/tilEmailName"
         app:layout_constraintStart_toStartOf="@+id/tilEmailName"
         app:layout_constraintTop_toBottomOf="@+id/tilEmailName">
@@ -81,8 +114,12 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPasswordName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:singleLine="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -91,8 +128,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/rounded_button_blue"
         android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tilPasswordName"
         app:layout_constraintStart_toStartOf="@+id/tilPasswordName"
         app:layout_constraintTop_toBottomOf="@+id/tilPasswordName" />

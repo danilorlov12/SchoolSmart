@@ -12,37 +12,37 @@
         <item name="colorAccent">@color/blue_light</item>
     </style>
 
-    <style name="TextBlueLight54" >
+    <style name="TextBlueLight54">
         <item name="android:textColor">@color/colorGrey</item>
         <item name="android:textSize">54sp</item>
     </style>
 
-    <style name="TextBlackLight32" >
+    <style name="TextBlackLight32">
         <item name="android:textColor">@color/colorGrey</item>
         <item name="android:textSize">30sp</item>
     </style>
 
-    <style name="TextBlueLight24A0" >
+    <style name="TextBlueLight24A0">
         <item name="android:textColor">@color/colorGrey</item>
         <item name="android:textSize">24sp</item>
     </style>
 
-    <style name="TextBlueLight24" >
+    <style name="TextBlueLight24">
         <item name="android:textColor">@color/blue_light</item>
         <item name="android:textSize">24sp</item>
     </style>
 
-    <style name="TextBlue24" >
+    <style name="TextBlue24">
         <item name="android:textColor">@color/blue_dark</item>
         <item name="android:textSize">24sp</item>
     </style>
 
-    <style name="TextBlue18" >
+    <style name="TextBlue18">
         <item name="android:textColor">@color/blue_dark</item>
         <item name="android:textSize">18sp</item>
     </style>
 
-    <style name="TextBlue14" >
+    <style name="TextBlue14">
         <item name="android:textColor">@color/blue_dark</item>
         <item name="android:textSize">14sp</item>
     </style>
@@ -82,11 +82,34 @@
         <item name="android:backgroundTint">@android:color/transparent</item>
     </style>
 
+    <style name="TextInputLayoutDefault" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="boxBackgroundColor">@color/transparent</item>
+        <item name="colorSurface">@color/transparent</item>
+        <item name="boxStrokeColor">@color/text_input_box_on_white</item>
+        <item name="hintTextColor">@color/text_input_box_on_white</item>
+    </style>
+
+    <style name="TextInputEditTextDefault">
+        <item name="colorControlActivated">@color/blue_light</item>
+    </style>
+
     <style name="BottomNavigation" parent="Theme.AppCompat.Light">
         <item name="android:background">@color/blue_dark</item>
         <item name="itemBackground">@color/white</item>
         <item name="itemIconTint">@color/active_tab_color</item>
         <item name="itemTextColor">@color/active_tab_color</item>
         <item name="itemIconSize">28sp</item>
+    </style>
+
+    <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="behavior_peekHeight">250dp</item>
+        <item name="android:background">@drawable/rounded_rectangle_8_top</item>
     </style>
 </resources>
