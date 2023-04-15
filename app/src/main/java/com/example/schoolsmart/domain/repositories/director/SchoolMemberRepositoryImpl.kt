@@ -1,7 +1,7 @@
 package com.example.schoolsmart.domain.repositories.director
 
+import com.example.base.stateFlow
 import com.example.schoolsmart.domain.entities.SchoolMember
-import com.example.schoolsmart.extensions.stateFlow
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.coroutines.tasks.await
 

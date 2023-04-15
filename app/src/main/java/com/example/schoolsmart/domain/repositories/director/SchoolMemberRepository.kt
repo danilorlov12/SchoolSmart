@@ -1,6 +1,6 @@
 package com.example.schoolsmart.domain.repositories.director
 
-import com.example.schoolsmart.data.State
+import com.example.base.State
 import com.example.schoolsmart.domain.entities.SchoolMember
 import kotlinx.coroutines.flow.Flow
 
