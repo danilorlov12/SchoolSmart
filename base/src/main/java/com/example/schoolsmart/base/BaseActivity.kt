@@ -1,10 +1,8 @@
 package com.example.schoolsmart.base
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
 
 abstract class BaseActivity<B: ViewBinding>(

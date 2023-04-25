@@ -1,4 +1,4 @@
-package com.example.base
+package com.example.data
 
 sealed class State<out T> {
     class Loading<T> : State<T>()

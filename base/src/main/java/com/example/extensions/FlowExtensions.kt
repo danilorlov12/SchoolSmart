@@ -1,5 +1,6 @@
-package com.example.base
+package com.example.extensions
 
+import com.example.data.State
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.flow.Flow
