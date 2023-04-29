@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.schoolsmart.R
-import com.example.schoolsmart.base.ClickListener
+import com.example.base.ClickListener
 import com.example.schoolsmart.domain.entities.SchoolMember
 
 class SchoolMembersAdapter(

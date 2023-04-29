@@ -6,9 +6,8 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.navOptions
-import androidx.navigation.ui.setupWithNavController
 import com.example.schoolsmart.R
-import com.example.schoolsmart.base.BaseActivity
+import com.example.base.BaseActivity
 import com.example.schoolsmart.databinding.DirectorActivityBinding
 import com.example.schoolsmart.presentation.director.school_class_list.SchoolClassesFragment
 import com.example.schoolsmart.presentation.director.subject.SubjectsFragment

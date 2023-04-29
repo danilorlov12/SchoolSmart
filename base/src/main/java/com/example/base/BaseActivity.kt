@@ -1,4 +1,4 @@
-package com.example.schoolsmart.base
+package com.example.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

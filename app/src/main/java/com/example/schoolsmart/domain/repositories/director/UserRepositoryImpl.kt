@@ -16,7 +16,8 @@ class UserRepositoryImpl : UserRepository {
     private val firebaseOptions: FirebaseOptions = FirebaseOptions.Builder()
         .setDatabaseUrl("https://diplomadatabase-b1df6-default-rtdb.firebaseio.com/")
         .setApiKey("AIzaSyDNuyjJKb43oxYdQrqBu8FJROqCC9424GQ")
-        .setApplicationId("diplomadatabase-b1df6").build()
+        .setApplicationId("diplomadatabase-b1df6")
+        .build()
 
     override suspend fun registerUser(user: User, tableName: String) {
         val app = FirebaseApp.initializeApp(

@@ -3,7 +3,7 @@ package com.example.schoolsmart.presentation.director.user_edit
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.schoolsmart.base.BaseViewModel
+import com.example.base.BaseViewModel
 import com.example.schoolsmart.domain.entities.User
 import com.example.schoolsmart.domain.repositories.director.UserRepository
 import com.example.schoolsmart.domain.repositories.director.UserRepositoryImpl
@@ -36,7 +36,7 @@ class UserEditViewModel : BaseViewModel() {
         _password.value = user.password ?: ""
     }
 
-    fun sendTeacherInfoToDatabase(userType: String) {
+    fun prepareAndSendUserInfo(userType: String) {
         viewModelScope.launch {
             val user = User(
                 firstName = _firstName.value ?: "",

@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.data.State
-import com.example.schoolsmart.base.BaseViewModel
+import com.example.base.BaseViewModel
 import com.example.schoolsmart.domain.entities.SchoolMember
 import com.example.schoolsmart.domain.repositories.director.SchoolMemberRepository
 import com.example.schoolsmart.domain.repositories.director.SchoolMemberRepositoryImpl

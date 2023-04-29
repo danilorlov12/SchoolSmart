@@ -1,7 +1,7 @@
 package com.example.schoolsmart.presentation.director.school_class_edit
 
 import androidx.lifecycle.ViewModelProvider
-import com.example.schoolsmart.base.BaseBottomSheetDialog
+import com.example.base.BaseBottomSheetDialog
 import com.example.schoolsmart.databinding.DialogSchoolClassEditBinding
 
 class SchoolClassEditDialog : BaseBottomSheetDialog<DialogSchoolClassEditBinding>(DialogSchoolClassEditBinding::inflate) {

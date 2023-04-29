@@ -1,4 +1,4 @@
-package com.example.schoolsmart.base
+package com.example.base
 
 import android.app.Dialog
 import android.os.Bundle

@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.schoolsmart.base.BaseActivity
+import com.example.base.BaseActivity
 import com.example.schoolsmart.databinding.AuthActivityBinding
 import com.example.schoolsmart.domain.entities.UserType
 import com.example.schoolsmart.presentation.director.DirectorActivity

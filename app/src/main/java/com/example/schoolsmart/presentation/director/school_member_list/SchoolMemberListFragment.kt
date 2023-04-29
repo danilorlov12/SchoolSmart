@@ -2,14 +2,12 @@ package com.example.schoolsmart.presentation.director.school_member_list
 
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.schoolsmart.base.BaseFragment
-import com.example.schoolsmart.base.ClickListener
+import com.example.base.BaseFragment
+import com.example.base.ClickListener
 import com.example.schoolsmart.databinding.FragmentListBinding
 import com.example.schoolsmart.domain.entities.SchoolMember
-import com.example.schoolsmart.domain.entities.Teacher
 import com.example.schoolsmart.domain.entities.UserType
 import com.example.schoolsmart.presentation.director.school_member_list.adapter.SchoolMembersAdapter
-import com.example.schoolsmart.presentation.director.teacher_list.adapter.TeachersAdapter
 import com.example.schoolsmart.presentation.director.user_edit.UserEditDialog
 
 class SchoolMemberListFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::inflate) {
