@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.viewbinding.ViewBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
-abstract class BaseBottomSheetDialog<B : ViewBinding>(
+abstract class BaseBottomSheetDialog<VM: BaseViewModel, B : ViewBinding>(
     bindingFactory: (LayoutInflater, ViewGroup?, Boolean) -> B
-) : BaseDialogFragment<B>(bindingFactory) {
+) : BaseDialogFragment<VM, B>(bindingFactory) {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return BottomSheetDialog(requireContext(), theme)

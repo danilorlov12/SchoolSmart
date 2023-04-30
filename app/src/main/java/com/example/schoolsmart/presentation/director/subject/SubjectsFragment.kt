@@ -1,6 +1,5 @@
 package com.example.schoolsmart.presentation.director.subject
 
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.base.BaseFragment
 import com.example.base.ClickListener
@@ -8,11 +7,9 @@ import com.example.schoolsmart.databinding.FragmentListBinding
 import com.example.schoolsmart.domain.entities.Subject
 import com.example.schoolsmart.presentation.director.subject.adapter.SubjectAdapter
 
-class SubjectsFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::inflate) {
+class SubjectsFragment : BaseFragment<SubjectsViewModel, FragmentListBinding>(FragmentListBinding::inflate) {
 
-    private val viewModel: SubjectsViewModel by lazy {
-        ViewModelProvider(this)[SubjectsViewModel::class.java]
-    }
+    override fun viewModelClass() = SubjectsViewModel::class.java
 
     private lateinit var _adapter: SubjectAdapter
 

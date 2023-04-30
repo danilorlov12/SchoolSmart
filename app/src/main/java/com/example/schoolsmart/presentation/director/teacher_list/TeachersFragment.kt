@@ -1,6 +1,5 @@
 package com.example.schoolsmart.presentation.director.teacher_list
 
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.base.BaseFragment
 import com.example.base.ClickListener
@@ -10,11 +9,9 @@ import com.example.schoolsmart.domain.entities.UserType
 import com.example.schoolsmart.presentation.director.teacher_list.adapter.TeachersAdapter
 import com.example.schoolsmart.presentation.director.user_edit.UserEditDialog
 
-class TeachersFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::inflate) {
+class TeachersFragment : BaseFragment<TeachersViewModel, FragmentListBinding>(FragmentListBinding::inflate) {
 
-    private val viewModel: TeachersViewModel by lazy {
-        ViewModelProvider(this)[TeachersViewModel::class.java]
-    }
+    override fun viewModelClass() = TeachersViewModel::class.java
 
     private lateinit var _adapter: TeachersAdapter
 

@@ -1,7 +1,8 @@
-package com.example.presentation
+package com.example.schoolsmart.presentation
 
 import android.text.Editable
 import android.util.Patterns
+import com.example.schoolsmart.R
 import com.google.android.material.textfield.TextInputLayout
 
 interface Validator {
@@ -12,9 +13,9 @@ interface Validator {
         override fun isValid(input: Editable?): Boolean {
             with(textInputLayout) {
                 error = if (input.isNullOrEmpty()) {
-                    "Empty field"
-                } else if (input.length < 3) {
-                    "Field must contains 3 or more characters"
+                    textInputLayout.context.getString(R.string.field_is_empty)
+                } else if (input.length in 0..21) {
+                    textInputLayout.context.getString(R.string.length_to_20)
                 } else {
                     isErrorEnabled = false
                     null
@@ -28,9 +29,9 @@ interface Validator {
         override fun isValid(input: Editable?): Boolean {
             with(textInputLayout) {
                 error = if (input.isNullOrEmpty()) {
-                    "Empty field"
-                } else if (Patterns.EMAIL_ADDRESS.matcher(input).matches()) {
-                    "Invalid input"
+                    textInputLayout.context.getString(R.string.field_is_empty)
+                } else if (!Patterns.EMAIL_ADDRESS.matcher(input).matches()) {
+                    textInputLayout.context.getString(R.string.invalid_format)
                 } else {
                     isErrorEnabled = false
                     null
@@ -44,9 +45,9 @@ interface Validator {
         override fun isValid(input: Editable?): Boolean {
             with(textInputLayout) {
                 error = if (input.isNullOrEmpty()) {
-                    "Empty field"
-                } else if (input.length < 3) {
-                    "Field length must be from 3 to 15"
+                    textInputLayout.context.getString(R.string.field_is_empty)
+                } else if (input.length in 3..16) {
+                    textInputLayout.context.getString(R.string.length_from_3_to_15)
                 } else {
                     isErrorEnabled = false
                     null

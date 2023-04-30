@@ -2,9 +2,9 @@ package com.example.schoolsmart.presentation.director.user_edit
 
 import android.app.Dialog
 import android.os.Bundle
-import androidx.lifecycle.ViewModelProvider
+import androidx.core.widget.doOnTextChanged
 import com.example.base.BaseBottomSheetDialog
-import com.example.presentation.Validator
+import com.example.schoolsmart.presentation.Validator
 import com.example.schoolsmart.R
 import com.example.schoolsmart.databinding.DialogUserEditBinding
 import com.example.schoolsmart.domain.entities.User
@@ -15,11 +15,9 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 class UserEditDialog(
     private val userType: UserType,
     private val user: User? = null,
-) : BaseBottomSheetDialog<DialogUserEditBinding>(DialogUserEditBinding::inflate) {
+) : BaseBottomSheetDialog<UserEditViewModel, DialogUserEditBinding>(DialogUserEditBinding::inflate) {
 
-    private val viewModel: UserEditViewModel by lazy {
-        ViewModelProvider(this)[UserEditViewModel::class.java]
-    }
+    override fun viewModelClass() = UserEditViewModel::class.java
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return BottomSheetDialog(requireContext(), R.style.DialogStyle).apply {
@@ -30,15 +28,31 @@ class UserEditDialog(
         }
     }
 
+    override fun initViewModel() = Unit
+
     override fun initBinding() = with(binding) {
+        etFirstName.doOnTextChanged { text, _, _, _ ->
+            viewModel.firstName.value = text.toString()
+        }
+        etFirstName.setText(user?.firstName ?: "")
+        etLastName.doOnTextChanged { text, _, _, _ ->
+            viewModel.lastName.value = text.toString()
+        }
+        etLastName.setText(user?.lastName ?: "")
+        etMiddleName.doOnTextChanged { text, _, _, _ ->
+            viewModel.middleName.value = text.toString()
+        }
+        etMiddleName.setText(user?.middleName ?: "")
+        etEmail.doOnTextChanged { text, _, _, _ ->
+            viewModel.email.value = text.toString()
+        }
+        etEmail.setText(user?.email ?: "")
+        etPassword.doOnTextChanged { text, _, _, _ ->
+            viewModel.password.value = text.toString()
+        }
+        etPassword.setText(user?.password)
         btnSave.setOnClickListener {
             if (validate()) viewModel.prepareAndSendUserInfo(userType.tableName)
-        }
-    }
-
-    override fun initViewModel() = with(viewModel) {
-        if (user != null) {
-            setDataFromUser(user)
         }
     }
 
@@ -47,8 +61,8 @@ class UserEditDialog(
             Validator.NameValidator(binding.tilFirstName).isValid(binding.etFirstName.text),
             Validator.NameValidator(binding.tilLastName).isValid(binding.etLastName.text),
             Validator.NameValidator(binding.tilMiddleName).isValid(binding.etMiddleName.text),
-            Validator.EmailValidator(binding.tilEmailName).isValid(binding.etEmailName.text),
-            Validator.PasswordValidator(binding.tilPasswordName).isValid(binding.etPasswordName.text)
+            Validator.EmailValidator(binding.tilEmail).isValid(binding.etEmail.text),
+            Validator.PasswordValidator(binding.tilPassword).isValid(binding.etPassword.text)
         )
         return validatorResults.all { it }
     }

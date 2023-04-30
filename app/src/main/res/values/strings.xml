@@ -59,4 +59,9 @@
     <string name="school_class_example">11-А Клас</string>
 
     <string name="adding_button">Кнопка добавления</string>
+
+    <string name="field_is_empty">Поле не заповнено</string>
+    <string name="invalid_format">Невірний формат</string>
+    <string name="length_from_3_to_15">Довжина від 3 до 15 символів</string>
+    <string name="length_to_20">Довжина до 20 символів</string>
 </resources>
